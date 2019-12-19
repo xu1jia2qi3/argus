@@ -22,7 +22,7 @@ async def fetch_image_by_id(url, img_id):
                 createFolder(f'{SAVE_FOLDER}{img_id}/')
                 with open(f'{SAVE_FOLDER}{img_id}/{img_id}.jpg', 'wb') as f:
                     f.write(image_data)
-                # print(f'Download complete - {img_id}.jpg')
+                print(f'Download complete - {img_id}.jpg')
             except Exception as e:
                 print(f'Download failed - {url}', e)
 
