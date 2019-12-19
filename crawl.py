@@ -8,6 +8,7 @@ MAX_DOWNLOAD_NUMBER = asyncio.Semaphore(10)
 CAMERA_DATA_PATH = f'./camera.json'
 SAVE_FOLDER = f'./Snapshot/'
 
+
 def createFolder(path):
     if not os.path.exists(path):
         os.makedirs(path)
@@ -17,7 +18,7 @@ async def fetch_image_by_id(url, img_id):
     async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(verify_ssl=False)) as session:
         async with session.get(url) as response:
             try:
-                image_data = await response.content.read()                
+                image_data = await response.content.read()
                 createFolder(f'{SAVE_FOLDER}{img_id}/')
                 with open(f'{SAVE_FOLDER}{img_id}/{img_id}.jpg', 'wb') as f:
                     f.write(image_data)
@@ -27,7 +28,7 @@ async def fetch_image_by_id(url, img_id):
 
 
 async def fetch_all_images():
-    sem = MAX_DOWNLOAD_NUMBER  
+    sem = MAX_DOWNLOAD_NUMBER
     try:
         with open(CAMERA_DATA_PATH, 'r') as f:
             cameras = json.load(f)
