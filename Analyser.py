@@ -3,7 +3,6 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dropout, Flatten, Dense
 from PIL import Image
-from flask_cors import cross_origin
 import tensorflow as tf
 import numpy as np
 import os
