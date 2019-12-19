@@ -4,17 +4,20 @@ from datetime import datetime
 import schedule
 import time
 
+
 def now_time():
     now = datetime.now()
     dt_string = now.strftime("%B %d, %Y %H:%M:%S")
     print('----------------------------------------------------------------------------------')
-    print("Record Time is", dt_string)  
+    print("Record Time is", dt_string)
     print('----------------------------------------------------------------------------------')
+
 
 def job():
     now_time()
     crawl.main()
-    Analyser.main()   
+    Analyser.main()
+
 
 print('Job Starts')
 Analyser.load_model()
