@@ -1,12 +1,11 @@
-from tensorflow.keras.preprocessing.image import img_to_array, load_img
+from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dropout, Flatten, Dense
 from PIL import Image
-from flask_cors import CORS, cross_origin
+from flask_cors import cross_origin
 import tensorflow as tf
 import numpy as np
-import requests
 import os
 from pathlib import Path
 import redis

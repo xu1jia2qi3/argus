@@ -1,4 +1,4 @@
-from tensorflow.keras.preprocessing.image import img_to_array, load_img
+from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dropout, Flatten, Dense
@@ -9,7 +9,6 @@ import numpy as np
 
 
 import redis
-import datetime
 import pickle
 import flask
 import requests
