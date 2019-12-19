@@ -5,6 +5,7 @@ __pycache__/
 *.docx
 .vscode/
 Snapshot/
+reTrainAI/
 
 # C extensions
 *.so
