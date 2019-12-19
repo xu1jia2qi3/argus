@@ -46,7 +46,7 @@ def main():
     start = time.perf_counter()
     event_loop = asyncio.get_event_loop()
     future = asyncio.ensure_future(fetch_all_images())
-    results = event_loop.run_until_complete(future)
+    event_loop.run_until_complete(future)
     finish = time.perf_counter()
     print(f'All images finished in {round(finish - start,2)} seconds(s)')
 
